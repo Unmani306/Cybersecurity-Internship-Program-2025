@@ -1,0 +1,30 @@
+2025-09-15 08:30:05 INFO User alice logged in
+2025-09-15 08:35:10 INFO User bob logged in
+2025-09-15 08:35:15 INFO User bob accessed /etc/shadow
+2025-09-15 08:36:40 INFO User carol logged in
+2025-09-15 08:38:50 INFO User dave logged in
+2025-09-15 08:40:22 INFO System service 'httpd' restarted
+2025-09-15 08:45:05 INFO User carol accessed /home/carol/docs/report.txt
+2025-09-15 08:50:15 INFO User dave accessed /var/secure
+2025-09-15 08:55:30 INFO User alice ran 'chmod 777 /etc/passwd'
+2025-09-15 09:00:00 INFO Scheduled backup started
+2025-09-15 09:05:01 ERROR Failed login from IP: 203.0.113.55
+2025-09-15 09:05:02 ERROR Failed login from IP: 203.0.113.55
+2025-09-15 09:05:03 ERROR Failed login from IP: 203.0.113.55
+2025-09-15 09:06:10 INFO User alice accessed /home/alice/finance.xlsx
+2025-09-15 09:10:18 INFO User alice changed user permissions for 'guest'
+2025-09-15 09:12:30 INFO User alice ran 'sudo su -'
+2025-09-15 09:15:00 INFO System service 'ssh' restarted
+2025-09-15 09:15:45 INFO User bob logged out
+2025-09-15 09:18:22 INFO Failed attempts from IP: 198.51.100.22
+2025-09-15 09:20:00 INFO System health check completed
+2025-09-15 09:25:30 INFO User carol logged out
+2025-09-15 09:30:05 INFO User dave accessed /home/dave/projects/code.py
+2025-09-15 09:32:45 INFO User carol modified /etc/sysctl.conf
+2025-09-15 09:35:12 ERROR Failed login from IP: 198.51.100.23
+2025-09-15 09:37:45 INFO User dave ran 'sudo su -'
+2025-09-15 09:40:00 INFO Scheduled backup completed
+2025-09-15 09:42:18 INFO User bob ran '/tmp/malware.sh'
+2025-09-15 09:45:10 INFO User bob accessed /root
+2025-09-15 09:50:05 INFO User alice logged out
+2025-09-15 09:55:15 INFO System service 'nginx' restarted

@@ -1,0 +1,16 @@
+ <?php 
+$m= new MongoClient();
+echo "Connection to database successfully";
+$db = $m -> MYDB259704;
+echo"\nDatabase selected successfully";
+$col = $db ->Mycol;
+echo"\nCollection selected successfully";
+$doc = array(
+"name"=>"Unmani",
+"age"=>20,
+"dept"=>"TYIT",
+"rollno"=>259704
+);
+$col -> insert($doc);
+echo "\nDocument inserted successfully";
+?>

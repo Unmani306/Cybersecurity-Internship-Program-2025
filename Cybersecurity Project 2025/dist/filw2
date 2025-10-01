@@ -1,0 +1,33 @@
+ <script>
+        $(document).ready(function () {
+            $("#b1").hover (function(){
+            document.write("Hello Romal")
+            })
+            $("p").on("click", function() {
+                $(this).css("background", "yellow");
+            });
+            $("#b2").click(function(){
+                $("p").off("click");
+            });
+            $("#b3").on(function(){
+                $("#t1").hide();
+            });
+            $("input").select(function(){
+                $("input").after("Text Marked!")
+            });
+            $("#b4").click(function(){
+                $("input").trigger("select");
+            });
+        })
+    </script>
+</head>
+<body>
+    <button id="b1">Hover</button><br>
+    <p>Welcome to the Mulund College</p><br>
+    <p>Romal: 239720</p><br>
+    <button id="b2">Off</button><br>
+    <p id="t1">Hello Romal</p><br>
+    <button id="b3">On</button><br>
+    <input type="text" value="Romal 239720"><br>
+    <button id="b4">Trigger</button><br>
+</body>

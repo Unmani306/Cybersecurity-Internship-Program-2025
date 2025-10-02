@@ -1,33 +1,28 @@
- <script>
-        $(document).ready(function () {
-            $("#b1").hover (function(){
-            document.write("Hello Romal")
-            })
-            $("p").on("click", function() {
-                $(this).css("background", "yellow");
-            });
-            $("#b2").click(function(){
-                $("p").off("click");
-            });
-            $("#b3").on(function(){
-                $("#t1").hide();
-            });
-            $("input").select(function(){
-                $("input").after("Text Marked!")
-            });
-            $("#b4").click(function(){
-                $("input").trigger("select");
-            });
-        })
-    </script>
-</head>
-<body>
-    <button id="b1">Hover</button><br>
-    <p>Welcome to the Mulund College</p><br>
-    <p>Romal: 239720</p><br>
-    <button id="b2">Off</button><br>
-    <p id="t1">Hello Romal</p><br>
-    <button id="b3">On</button><br>
-    <input type="text" value="Romal 239720"><br>
-    <button id="b4">Trigger</button><br>
-</body>
+using System; 
+class SimpleApplication 
+{ 
+ static void Main() 
+ { 
+ // Creating a simple application 
+ Console.WriteLine("Welcome to the Simple Application!");  Console.Write("Please enter your name: "); 
+ string name = Console.ReadLine(); 
+ Console.WriteLine("Hello, " + name + "! This is a simple application."); 
+ // Testing the application 
+ Console.WriteLine("\nTesting the Simple Application...");  Console.WriteLine("Enter 'quit' to exit the testing loop.");  while (true) 
+ { 
+ Console.Write("Enter a number to square (or 'quit' to exit): ");  string input = Console.ReadLine(); 
+  
+ if (input.ToLower() == "quit") 
+ break; 
+  
+ if (int.TryParse(input, out int number)) 
+ { 
+ int result = number * number; 
+ Console.WriteLine("The square of " + number + " is " + result + ".");  }
+ else 
+ { 
+ Console.WriteLine("Invalid input. Please enter a valid number or 'quit'.");  } 
+ } 
+ Console.WriteLine("\nTesting complete. Press any key to exit.");  Console.ReadKey(); 
+ } 
+}

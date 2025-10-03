@@ -1,0 +1,15 @@
+import random
+def play():
+    user = input("Enter your choice: ").lower()
+    choices = ["rock", "paper", "scissors"]
+    computer = random.choice(choices)
+    print(f"\nYou chose: {user}")
+    print(f"Computer chose: {computer}")
+    if user == computer:
+        print("Its a Tie!!")
+    elif(user == "rock" and computer == "scissors") or (user == "paper" and computer == "rock") or (user == "scissors" and computer == "paper"):
+            print("You Win!!")
+    else:
+        print("Computer Wins!!")
+
+play()

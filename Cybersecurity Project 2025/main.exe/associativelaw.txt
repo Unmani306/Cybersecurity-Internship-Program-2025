@@ -1,0 +1,55 @@
+print("Arithmetic Associative law")
+a = int(input("Enter the value for a : "))
+b = int(input("Enter the value for b : "))
+c = int(input("Enter the value for c : "))
+
+lhs_add = (a+b) + c
+rhs_add = a + (b+c)
+
+print(f"(a+b) + c =  ({a} + {b}) + {c} = {lhs_add}")
+print(f"a+ (b + c) =  {a} + ({b} + {c}) = {rhs_add}")
+
+if lhs_add == rhs_add:
+    print("Addition Associatie Law holds")
+else:
+    print("Addition Associatie Law does not holds")
+
+lhs_mul = (a*b) * c
+rhs_mul = a * (b*c)
+
+print(f"(a*b) * c =  ({a} * {b}) * {c} = {lhs_mul}")
+print(f"a* (b * c) =  {a} * ({b} * {c}) = {rhs_mul}")
+
+if lhs_mul == rhs_mul:
+    print("Multiplication Associatie Law holds")
+else:
+    print("Multiplication Associatie Law does not holds")
+
+
+print("Boolean Associatice law")
+print("Enter boolean values as 1 (True) and 0 (False) : ")
+A = bool(int(input("Enter value for A: ")))
+B = bool(int(input("Enter value for B: ")))
+C = bool(int(input("Enter value for C: ")))
+
+lhs_AND = (A and B) and C
+rhs_AND = A and (B and C)
+
+print(f"(A and B) and C =  ({A} and {B}) and {C} = {lhs_AND}")
+print(f"A and (B and C) =  {A} and ({B} and {C}) = {rhs_AND}")
+
+if lhs_AND == rhs_AND:
+    print("AND Associatie Law holds")
+else:
+    print("AND Associatie Law does not holds")
+
+lhs_OR = (A or B) or C
+rhs_OR = A or (B or C)
+
+print(f"(A or B) or C =  ({A} or {B}) or {C} = {lhs_OR}")
+print(f"A or (B or C) =  {A} and ({B} or {C}) = {rhs_OR}")
+
+if lhs_OR == rhs_OR:
+    print("OR Associatie Law holds")
+else:
+    print("OR Associatie Law does not holds")

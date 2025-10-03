@@ -1,0 +1,45 @@
+print("Arithmetic Distributed law")
+a = int(input("Enter the value for a : "))
+b = int(input("Enter the value for b : "))
+c = int(input("Enter the value for c : "))
+
+lhs_ari = a * (b + c)
+rhs_ari = (a * b) + (b * c)
+
+print(f"a * (b  + c) =  {a} * ({b} + {c}) = {lhs_ari}")
+print(f"(a * b) + (b * c) =  ({a} * {b}) + ({b} * {c}) = {rhs_ari}")
+
+if lhs_ari == rhs_ari:
+    print("Addition Distributed Law holds")
+else:
+    print("Addition Distributed Law does not holds")
+
+
+print("Boolean Distributed law")
+print("Enter boolean values as 1 (True) and 0 (False) : ")
+A = bool(int(input("Enter value for A: ")))
+B = bool(int(input("Enter value for B: ")))
+C = bool(int(input("Enter value for C: ")))
+
+lhs_bool = A and (B or C)
+rhs_bool = (A and B) or (A and C)
+
+print(f"A and (B or C) = {A} and ({B} or {C}) = {lhs_bool}")
+print(f"(A and B) or (A and C) = ({A} and {B}) or ({A} and {C}) = {rhs_bool}")
+
+if lhs_bool == rhs_bool:
+    print("Boolean Distributive Law (AND over OR) holds")
+else:
+    print("Boolean Distributive Law (AND over OR) does not hold")
+
+
+lhs_bool2 = A or (B and C)
+rhs_bool2 = (A or B) and (A or C)
+
+print(f"A or (B and C) = {A} or ({B} and {C}) = {lhs_bool2}")
+print(f"(A or B) and (A or C) = ({A} or {B}) and ({A} or {C}) = {rhs_bool2}")
+
+if lhs_bool2 == rhs_bool2:
+    print("Boolean Distributive Law (AND over OR) holds")
+else:
+    print("Boolean Distributive Law (AND over OR) does not hold")

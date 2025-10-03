@@ -1,0 +1,75 @@
+from queue import Queue
+adj_list = {
+    'A' : ['B', 'D'],
+    'B' : ['C', 'F'],
+    'C' : ['E', 'G' ,'H'],
+    'G' : ['E', 'H'],
+    'E' : ['B', 'F'],
+    'F' : ['A'],
+    'D' : ['F'],
+    'H' : ['A'],
+}
+visited = {}
+level = {}
+parent = {}
+bfs_traversal =[]
+queue = Queue()
+
+for node in adj_list.keys ():
+    visited[node] = False
+    parent[node] = None
+    level[node] = -1
+
+source = "A"
+visited[source] = True
+level[source] = 0
+queue.put(source)
+
+while not queue.empty():
+    u = queue.get()
+    bfs_traversal.append(u)
+
+    for v in adj_list[u]:
+        if not visited[v]:
+            visited[v] = True
+            parent[v] = u
+            level[v] = level[u] +1
+            queue.put(v)
+print("BFS Traversal: ", bfs_traversal)
+
+node = "E"
+path = []
+while node is not None:
+    path.append(node)
+    node = parent[node]
+
+path.reverse()
+print("Shortest path is: ", path)
+
+Output:
+
+Q.2 WAP to implement Depth First Search Algorithm.
+Code:
+graph = {
+    'A' : ['B', 'D'],
+    'B' : ['C', 'F'],
+    'C' : ['E', 'G' ,'H'],
+    'G' : ['E', 'H'],
+    'E' : ['B', 'F'],
+    'F' : ['A'],
+    'D' : ['F'],
+    'H' : ['A'],
+}
+
+def dfs(g, n, seen, d):    #g = graph, n = source node, d = destination, seen = empty list which we are passing here.
+    if n not in seen:
+        seen.append(n)
+        for i in g[n]:
+            if seen[-1] is d:
+                break
+            dfs(g, i, seen, d)
+    return seen
+
+print(dfs(graph, 'A', [], 'H'))
+
+Output:
